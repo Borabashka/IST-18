@@ -1,0 +1,29 @@
+program lab6;
+Const
+  n = 5;
+  
+  Var
+  i, j, sum : integer; 
+  Matrice : array[1..n, 1..n] of integer; 
+ 
+ 
+Begin
+Randomize; 
+
+
+for i := 1 to n do
+ begin 
+  for j := 1 to n do
+    Matrice[i, j] := Random(100);
+    end;
+
+for i := 1 to n do 
+  begin
+  
+  Sum := 0;
+  for j :=1 to n-i-1 do
+    begin
+    Sum := Sum + Matrice[j, j+(i-1)];
+    end;
+    
+End.
